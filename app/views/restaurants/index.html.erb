@@ -1,0 +1,11 @@
+<h1>The best restaurants</h1>
+
+<ul>
+  <% @restaurants.each do |restaurant| %>
+    
+    <li>
+      <%= link_to restaurant.name, restaurant %> rating: <%= restaurant.rating %>
+      <%= link_to 'delete', restaurant, method: :delete,  data: { confirm: "Are you sure?" } %>
+    </li>
+  <% end %>
+</ul>
